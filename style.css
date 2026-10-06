@@ -1,0 +1,14 @@
+body {
+    background-image: url(./wallpaper.png);
+    background-size: cover;
+}
+.topbar {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(1, 0, 0, 1);
+    color: white;
+}
