@@ -10,7 +10,51 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    backdrop-filter: blur(10px);
-    background-color: rgba(1, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 255);
+    color: black;
+}
+.apps {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.app {
+    padding-left: 10px;
+    padding_right: 10px;
+    cursor: pointer;
+}
+.window {
+    border: 1px solid white;
     color: white;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+}
+.header {
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    cursor: move;
+}
+.header p {
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+.header .closeicon {
+    padding-top: 4px;
+    padding-left: 16px;
+    padding-bottom: 4px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+}
+.content {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
