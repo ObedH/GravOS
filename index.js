@@ -16,6 +16,11 @@ function updateTime() {
 }
 var bottombarheight = 0;
 const windowpadding = 5;
+var idx = 1;
+var dialogueLines = [
+  "Welcome to GravOS! This is a webpage that lets you take a look at the operating system I run on.",
+  "I'm Grav, a robot assistant to help your space travel!"
+];
 document.addEventListener("DOMContentLoaded", function() {
     updateTime();
     dragElement(document.getElementById("welcome"));
@@ -29,7 +34,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     welcomeScreenOpen.addEventListener("click", function() {
         openWindow(welcomeScreen);
+        idx = 0;
     });
+
+  document.getElementById("next").addEventListener("click", function() {
+    if(idx >= 2) {
+      closeWindow(welcomeScreen);
+      return;
+    }
+    document.getElementById("dialoguebox").textContent = dialogueLines[idx];
+    idx ++;
+  });
+
 });
 setInterval(updateTime, 1000);
 
