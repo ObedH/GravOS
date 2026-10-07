@@ -24,6 +24,7 @@ var dialogueLines = [
 document.addEventListener("DOMContentLoaded", function() {
     updateTime();
     dragElement(document.getElementById("welcome"));
+    dragElement(document.getElementById("superorbital"));
     bottombarheight = document.getElementsByClassName("topbar")[0].offsetHeight;
 
     var welcomeScreenClose = document.querySelector("#welcomeclose");
@@ -34,6 +35,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     welcomeScreenOpen.addEventListener("click", function() {
         openWindow(welcomeScreen);
+        idx = 0;
+    });
+
+    var supClose = document.querySelector("#superorbitalclose");
+    var supOpen = document.querySelector("#superorbitalopen");
+    var supScreen = document.querySelector("#superorbital");
+    supClose.addEventListener("click", function() {
+        closeWindow(supScreen);
+    });
+    supOpen.addEventListener("click", function() {
+        openWindow(supScreen);
         idx = 0;
     });
 
