@@ -21,7 +21,7 @@ body {
 }
 .app {
     padding-left: 24px;
-    padding_right: 24px;
+    padding-right: 24px;
     cursor: pointer;
 }
 .window {
@@ -30,6 +30,8 @@ body {
     border-radius: 3px;
     background-color: black;
     position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 .header {
     width: 100%;
@@ -55,9 +57,12 @@ body {
 .content {
     padding: 16px;
     text-align: center;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
+    min-height: 0;
+    overflow-y: auto;
+    flex: 1;
 }
 .button {
     cursor: pointer;
