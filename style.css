@@ -1,13 +1,15 @@
 body {
     margin: 0;
     padding: 0;
+    
     background-image:
-        url('https://i.imgur.com/PIKxnO4.png'),
-        url('https://i.imgur.com/wRiroot.png'),
-        url('https://i.imgur.com/RglXUEQ.png');
-    background-repeat: repeat-x, repeat-y, repeat-x, repeat-y, repeat-x, repeat-y;
+        url('./PIKxnO4.png'),
+        url('./wRiroot.png'),
+        url('./RglXUEQ.png');
+    background-repeat: repeat, repeat, repeat;
     background-size: cover, auto;
         animation: background_scroll 200s linear infinite;
+
 }
 @keyframes background_scroll {
     from {
@@ -23,8 +25,8 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    background-color: rgba(255, 255, 255, 255);
-    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 .apps {
     flex-grow: 1;
