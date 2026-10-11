@@ -19,12 +19,15 @@ const windowpadding = 5;
 var idx = 1;
 var dialogueLines = [
   "Welcome to GravOS! This is a webpage that lets you take a look at the operating system I run on.",
-  "I'm Grav, a robot assistant to help your space travel!"
+  "I'm Grav, a robot assistant to help your space travel!",
+  "On the bottom of the screen, there's a bar with a few apps.",
+  "Click on any of them to check them out."
 ];
 document.addEventListener("DOMContentLoaded", function() {
     updateTime();
     dragElement(document.getElementById("welcome"));
     dragElement(document.getElementById("superorbital"));
+    dragElement(document.getElementById("todo"));
     bottombarheight = document.getElementsByClassName("topbar")[0].offsetHeight;
 
     var welcomeScreenClose = document.querySelector("#welcomeclose");
@@ -46,16 +49,43 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     supOpen.addEventListener("click", function() {
         openWindow(supScreen);
-        idx = 0;
+    });
+
+    var gClose = document.querySelector("#todoclose");
+    var gOpen = document.querySelector("#todoopen");
+    var gScreen = document.querySelector("#todo");
+    gClose.addEventListener("click", function() {
+        closeWindow(gScreen);
+    });
+    gOpen.addEventListener("click", function() {
+        openWindow(gScreen);
     });
 
   document.getElementById("next").addEventListener("click", function() {
-    if(idx >= 2) {
+    if(idx >= 4) {
       closeWindow(welcomeScreen);
       return;
     }
     document.getElementById("dialoguebox").textContent = dialogueLines[idx];
     idx ++;
+  });
+
+  var add = document.getElementById("add");
+  var clear = document.getElementById("clear");
+  var tasks = document.getElementById("tasks");
+  add.addEventListener("click", function() {
+    var che = document.createElement("input");
+    che.setAttribute("type", "checkbox");
+    var tex = document.createElement("input");
+    tex.setAttribute("type", "text");
+    var li = document.createElement("li");
+    li.appendChild(che);
+    li.appendChild(tex);
+    
+    tasks.appendChild(li);
+  });
+  clear.addEventListener("click", function() {
+    tasks.innerHTML = "";
   });
 
 });

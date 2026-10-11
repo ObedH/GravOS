@@ -42,11 +42,38 @@
         </div>
       </div>
     </div>
+    <div class="window" id="todo" style="left: 20%; width: 40%; top: 20%; height: 50%; display: none;">
+      <div class="header" id="todoheader">
+        <p>Todo List</p>
+        <div id="todoclose" style="cursor: pointer;" class="closeicon">X</div>
+      </div>
+      <div class="content">
+        <div>
+          <ul style="list-style-type: none" id="tasks">
+            <li>
+              <input type="checkbox">
+              <input type="text">
+            </li>
+            <li>
+              <input type="checkbox">
+              <input type="text">
+            </li>
+            <li>
+              <input type="checkbox">
+              <input type="text">
+            </li>
+          </ul>
+          <button id="add">Add Task</button>
+          <button id="clear">Clear Tasks</button>
+        </div>
+      </div>
+    </div>
     
     <div class="topbar">
       <div class="apps">
         <p class="app" id="welcomeopen">Welcome</p>
         <p class="app" id="superorbitalopen">Check Out SuperOrbital</p>
+        <p class="app" id="todoopen">Todo List</p>
       </div>
       <p style="margin-right: 16px; margin-left: 16px">GravOS</p>
       <p style="margin-right: 16px; margin-left: 16px" id="time">5:41 pm</p>
