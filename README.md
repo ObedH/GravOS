@@ -3,6 +3,8 @@ GravOS is a simple, web based operating system with a basic desktop interface.
 The operating system is themed personalized to Grav, a robotic assistant that helps Vitri on their space travels.
 Grav is a character from SuperOrbital, which is one of the games I made recently.
 
+<img width="1920" height="867" alt="{0779649B-06B9-46BA-8B90-B7B98CEB5ACA}" src="https://github.com/user-attachments/assets/6ca824c2-f2cd-43a2-bc20-eca08e5340d4" />
+
 This is a project for [Hack Club Stardance](stardance.hackclub.com).
 
 [Try it!](https://obedh.github.io/GravOS/)
