@@ -119,5 +119,5 @@ function closeWindow(element) {
 }
 
 function openWindow(element) {
-  element.style.display = "block"
+  element.style.display = "flex"
 }
